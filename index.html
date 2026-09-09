@@ -11,6 +11,13 @@
         content="Abhishek Nerella — Electrical & Computer Engineering, embedded systems, digital design and data."
     >
 
+    <script>
+        const savedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme =
+            savedTheme || (prefersDark ? "dark" : "light");
+    </script>
+
     <link rel="stylesheet" href="style.css">
 
     <!-- Fonts -->
@@ -36,6 +43,9 @@
             <a href="#experience">Experience</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
+            <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+                <span aria-hidden="true">◐</span>
+            </button>
         </nav>
     </header>
 
@@ -61,7 +71,7 @@
                 <p class="hero-description">
                     I'm Abhishek Nerella, an Electrical & Computer Engineering
                     graduate interested in embedded systems, semiconductor
-                    devices, digital design and efficient computing.
+                    devices, digital design and data-driven compute optimization.
                 </p>
 
                 <div class="hero-buttons">
@@ -99,7 +109,7 @@
 
                 <div>
                     <span>04</span>
-                    <p>Efficient Computing</p>
+                    <p>Data-Driven Compute Optimization</p>
                 </div>
 
             </div>
@@ -154,7 +164,7 @@
 
                     <div class="interest">
                         <span>04</span>
-                        <strong>Efficient Computing</strong>
+                        <strong>Data-Driven Compute Optimization</strong>
                     </div>
 
                 </div>
@@ -452,7 +462,7 @@
                         </p>
 
                         <span class="location">
-                            India
+                            Delhi, India
                         </span>
                     </div>
 

@@ -12,6 +12,15 @@
 }
 
 
+html[data-theme="dark"] {
+    --background: #151515;
+    --foreground: #f5f5f2;
+    --muted: #aaa;
+    --border: #3a3a36;
+    --accent: #ff6a2a;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -29,6 +38,7 @@ body {
     color: var(--foreground);
     font-family: var(--sans);
     line-height: 1.6;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 
@@ -84,6 +94,22 @@ nav a {
 
 nav a:hover {
     color: var(--foreground);
+}
+
+
+.theme-toggle {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font: inherit;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+
+.theme-toggle:hover {
+    color: var(--accent);
 }
 
 
